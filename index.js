@@ -53,7 +53,7 @@ bot.on("message", async message => {
     `<@${sortable[1][0]}> - ${sortable [1][1]} wins`,
     `<@${sortable[2][0]}> - ${sortable [2][1]} wins`,
     `<@${sortable[3][0]}> - ${sortable [3][1]} wins`,
-     `<@${sortable[3][0]}> - ${sortable [4][1]} wins`
+     `<@${sortable[4][0]}> - ${sortable [4][1]} wins`
 
   ].join("\n"));
   leaderboard.send(embed);
