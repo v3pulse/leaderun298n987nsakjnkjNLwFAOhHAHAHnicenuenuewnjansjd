@@ -19,6 +19,7 @@ bot.on("message", async message => {
   let args = messageArray.slice(1);
   
   if(cmd === `${prefix}winner`){
+    message.delete();
     let leaderboard = message.guild.channels.find(c => c.name === "leaderboards");
   if(!message.member.roles.has(message.guild.roles.find(r => r.name === "Scrim Staff"))) return;
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
