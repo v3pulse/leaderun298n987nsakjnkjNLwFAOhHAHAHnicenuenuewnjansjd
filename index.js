@@ -21,7 +21,7 @@ bot.on("message", async message => {
   if(cmd === `${prefix}winner`){
     message.delete();
     let leaderboard = message.guild.channels.find(c => c.name === "leaderboards");
-  if(!message.member.roles.has(message.guild.roles.find(r => r.name === "Scrim Staff"))) return;
+  if(!message.member.roles.has(message.guild.roles.find(r => r.name === "Scrim Staff"))) return message.reply("You dont have perms");
   let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!rUser) return message.reply("User not found!").then(msg => msg.delete(5000));
   let winners = JSON.parse(fs.readFileSync("./winners.json", "utf8"));
