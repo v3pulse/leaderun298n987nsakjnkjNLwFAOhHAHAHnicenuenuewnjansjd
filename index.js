@@ -49,9 +49,12 @@ bot.on("message", async message => {
   .setFooter("Leaderboards updated")
   .setTimestamp()
   .addField("Top 5", [
-    `<@${sortable[0][0]}> - ${sortable [0][1]} wins`
-//     `<@${sortable[1][0]}> - ${sortable [1][1]} wins`
-//     `<@${sortable[2][1]}> - ${sortable [2][2]} wins`
+    `<@${sortable[0][0]}> - ${sortable [0][1]} wins`,
+    `<@${sortable[1][0]}> - ${sortable [1][1]} wins`,
+    `<@${sortable[2][1]}> - ${sortable [2][2]} wins`,
+    `<@${sortable[3][2]}> - ${sortable [3][3]} wins`,
+     `<@${sortable[4][3]}> - ${sortable [4][4]} wins`
+
   ].join("\n"));
   leaderboard.send(embed);
   
